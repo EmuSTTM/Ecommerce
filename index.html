@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <script src="https://kit.fontawesome.com/13e89618ce.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script defer src="stock.js"></script>
+    <script defer src="modal.js"></script>
+    
+    <script defer src="app.js"></script>
+    <script defer src="filter.js"></script>
+    <script defer src="stockAppend.js"></script>
+    
+</head>
+<body>
+    <header>
+        <h1 id="titulo" class="titulo">Ecommerce</h1>
+        <button id="boton-carrito"><i class="fa-solid fa-cart-shopping"></i><span id="contador-carrito">0</span></button>
+       
+    </header>
+    <select id="filtro-talle">
+        <option value="all">Todos</option>
+        <option value="L">Large</option>
+        <option value="M">Medium</option>
+        <option value="S">Small</option>
+    </select>
+    <button id="boton-modal-crear">+ nuevo producto</i></button>
+ 
+   <main id="contenedor-productos">  <!-- El main representa el contenido principal del body -->
+
+    </main>
+
+
+<!-- ERROR A SOLUCIONAR: necesito aplicar validaciones para est formulario para que no se puedan ingresar
+productos sin contenido-->
+    <div class="modal-contenedor-crear ">
+        <div class="modal-crear">
+            <h3 class="h3-crear">Crear producto</h3>
+            <button id="crear-cerrar" ><i class="fas fa-times-circle"></i></button>
+            <div id="crear-contenedor">
+
+                <form id="crear-form">
+                    <p>Introduzca el nombre de su producto</p> 
+                    <input type="text" id="nombre-nuevo" placeholder="Nombre">
+                    <p>Introduzca una imagen de su producto</p> 
+                    <input id="img-nuevo"type="file" accept=".png,.jpg">
+                    <p>Introduzca el tipo de producto</p> 
+                    <select id="tipo-nuevo">
+                        <option value="sin-tipo">Sin tipo</option>
+                        <option value="buzo">Buzo</option>
+                        <option value="camisa">Camisa</option>
+                        <option value="remera">Remera</option>
+                        <option value="pantalón">Pantalón</option>
+                    </select>
+                    <p>Introduzca una descripción</p>
+                    <input type="text" id="desc-nuevo" placeholder="Descripción">
+                    <p>Introduzca el talle de la prenda</p>
+                    <select id="talle-nuevo">
+                        <option value="all">Sin aclarar</option>
+                        <option value="L">Large</option>
+                        <option value="M">Medium</option>
+                        <option value="S">Small</option>
+                    </select>
+        
+                    <input type="number" id="precio-nuevo" placeholder="$">
+
+                    <button type="button" form="crear-form" id="boton-nuevo" >Agregar producto</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carrito-cerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor">
+                <!-- <div class="productoEnCarrito">
+                    <p>Buzo 1</p>
+                    <p>Precio: $1200</p>
+                    <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+                </div> -->
+            </div>
+            <p class="precio-producto">Precio total: $<span id="precio-total">0</span></p>
+            <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+        </div>
+    </div>
+</body>
+</html>
