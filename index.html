@@ -29,13 +29,11 @@
     </select>
     <button id="boton-modal-crear">+ nuevo producto</i></button>
  
-   <main id="contenedor-productos">  <!-- El main representa el contenido principal del body -->
+   <main id="contenedor-productos"> 
 
     </main>
 
 
-<!-- ERROR A SOLUCIONAR: necesito aplicar validaciones para est formulario para que no se puedan ingresar
-productos sin contenido-->
     <div class="modal-contenedor-crear">
         <div class="modal-crear ">
             <h3 class="h3-crear">Crear producto</h3>
@@ -48,7 +46,7 @@ productos sin contenido-->
                   
                     <input id="img-nuevo"type="file" accept=".png,.jpg" required>
                 
-                    <select id="tipo-nuevo" required>
+                    <select id="tipo-nuevo">
                         <option value="sin-tipo">Tipo de ropa sin aclarar</option>
                         <option value="buzo">Buzo</option>
                         <option value="camisa">Camisa</option>
@@ -57,7 +55,7 @@ productos sin contenido-->
                     </select>
                     <input type="text" id="desc-nuevo" placeholder="Descripción" required>
                     
-                    <select id="talle-nuevo" required>
+                    <select id="talle-nuevo">
                         <option value="all">Talle sin aclarar</option>
                         <option value="L">Large</option>
                         <option value="M">Medium</option>
@@ -73,7 +71,7 @@ productos sin contenido-->
         </div>
     </div>
 
-    <div class="modal-contenedor">
+    <div class="modal-contenedor-carrito">
         <div class="modal-carrito">
             <h3>Carrito</h3>
             <button id="carrito-cerrar"><i class="fas fa-times-circle"></i></button>

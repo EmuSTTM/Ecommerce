@@ -1,4 +1,8 @@
-const contenedorModal = document.getElementsByClassName('modal-contenedor')[0]
+// Modal se encargará de los addEventListeners correspondientes 
+// a abrir y cerrar el modal.
+
+
+const contenedorModalCarrito = document.getElementsByClassName('modal-contenedor-carrito')[0]
 const botonAbrir = document.getElementById('boton-carrito')
 const botonCerrar = document.getElementById('carrito-cerrar')
 const modalCarrito = document.getElementsByClassName('modal-carrito')[0]
@@ -9,14 +13,14 @@ const modalCrear = document.getElementsByClassName('modal-crear')[0]
 
 
 botonAbrir.addEventListener('click', ()=>{
-    contenedorModal.classList.toggle('modal-active')
+    contenedorModalCarrito.classList.toggle('modal-active')
 })
 botonCerrar.addEventListener('click', ()=>{
-    contenedorModal.classList.toggle('modal-active')
+    contenedorModalCarrito.classList.toggle('modal-active')
 })
 
-contenedorModal.addEventListener('click', () =>{
-    contenedorModal.classList.toggle('modal-active')
+contenedorModalCarrito.addEventListener('click', () =>{
+    contenedorModalCarrito.classList.toggle('modal-active')
 
 })
 modalCarrito.addEventListener('click', (event) => {

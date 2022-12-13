@@ -1,3 +1,5 @@
+// Acá vamos a tomar los datos del formulario y agregar un nuevo producto
+// al stockProductos(./stock) para así cargar el contenido otra vez
 
 const imgNuevo = document.getElementById("img-nuevo");
 const nombreNuevo = document.getElementById("nombre-nuevo");
@@ -9,7 +11,7 @@ const formulario = document.getElementById("crear-form")
 
 
 formulario.addEventListener("submit",(e)=>{
-    e.preventDefault() //Esto prevee el reinicio del programa al utilizar submit
+    e.preventDefault() //Esto evita el comportamiento default del programa, el cual es reiniciar la pag
     const productoNuevo = {};
     productoNuevo["id"] = stockProductos.length + 1;
     productoNuevo["nombre"] = nombreNuevo.value;
