@@ -125,9 +125,10 @@ const actualizarCarrito = () =>{
         contenedorCarrito.appendChild(div)
 
         // Esto guarda el carrito en el almacenamiento local para que no se pierda
-        localStorage.setItem('carrito',JSON.stringify(carrito))
+        
         
     })
+    localStorage.setItem('carrito',JSON.stringify(carrito))
     // Ahora actualizamos el numero del contador del carrito, arriba a la derecha en el header
     contadorCarrito.innerText = carrito.length
     
