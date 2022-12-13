@@ -36,38 +36,37 @@
 
 <!-- ERROR A SOLUCIONAR: necesito aplicar validaciones para est formulario para que no se puedan ingresar
 productos sin contenido-->
-    <div class="modal-contenedor-crear ">
-        <div class="modal-crear">
+    <div class="modal-contenedor-crear">
+        <div class="modal-crear ">
             <h3 class="h3-crear">Crear producto</h3>
             <button id="crear-cerrar" ><i class="fas fa-times-circle"></i></button>
             <div id="crear-contenedor">
 
                 <form id="crear-form">
-                    <p>Introduzca el nombre de su producto</p> 
-                    <input type="text" id="nombre-nuevo" placeholder="Nombre">
-                    <p>Introduzca una imagen de su producto</p> 
-                    <input id="img-nuevo"type="file" accept=".png,.jpg">
-                    <p>Introduzca el tipo de producto</p> 
-                    <select id="tipo-nuevo">
-                        <option value="sin-tipo">Sin tipo</option>
+                  
+                    <input type="text" id="nombre-nuevo" placeholder="Nombre" required>
+                  
+                    <input id="img-nuevo"type="file" accept=".png,.jpg" required>
+                
+                    <select id="tipo-nuevo" required>
+                        <option value="sin-tipo">Tipo de ropa sin aclarar</option>
                         <option value="buzo">Buzo</option>
                         <option value="camisa">Camisa</option>
                         <option value="remera">Remera</option>
                         <option value="pantalón">Pantalón</option>
                     </select>
-                    <p>Introduzca una descripción</p>
-                    <input type="text" id="desc-nuevo" placeholder="Descripción">
-                    <p>Introduzca el talle de la prenda</p>
-                    <select id="talle-nuevo">
-                        <option value="all">Sin aclarar</option>
+                    <input type="text" id="desc-nuevo" placeholder="Descripción" required>
+                    
+                    <select id="talle-nuevo" required>
+                        <option value="all">Talle sin aclarar</option>
                         <option value="L">Large</option>
                         <option value="M">Medium</option>
                         <option value="S">Small</option>
                     </select>
         
-                    <input type="number" id="precio-nuevo" placeholder="$">
+                    <input type="number" id="precio-nuevo" placeholder="$" required>
 
-                    <button type="button" form="crear-form" id="boton-nuevo" >Agregar producto</button>
+                    <button type="submit" form="crear-form" id="boton-nuevo" >Agregar producto</button>
                 </form>
 
             </div>

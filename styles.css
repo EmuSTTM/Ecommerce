@@ -213,41 +213,57 @@ p {
     visibility: visible;
 }
 
+
+/* MODAL CREAR / CREAR CONTENEDOR H3 / CREAR */
 .modal-crear {
     display:flex;
     flex-direction: column;
     position: relative;
     background-color: white;
-    min-width: 500px;
-    min-height: 500px;
+    width: 500px;
+    height: 500px;
     padding: 20px;
     margin-top: -100%;
     transition: all .5s;
 
+
 }
 
-.h3-crear{
+.modal-crear h3{
     font-size: 25px;
     margin:auto;
-    margin-bottom: 5px;
-    flex:1
 
 }
 
 
-.crear-form{
+#crear-form{
     display:flex;
-    flex-direction:column;
-    flex-wrap: wrap;
-    padding:20px;
-    flex:2;
+    flex-direction: column;
+    text-align: center;
     
 }
 
+#crear-form button{
+    margin:30px;
+    
+}
+
+#crear-form input, select{
+    padding:0px 5px;
+    margin:10px 0px;
+    
+}
+
+input[type="file"]{
+    display:block;
+    width: 100%;
+    background:rgb(128, 158, 250);
+    margin:auto;
+}
+
 #crear-contenedor{
-    display:flex;
-    flex-direction:row-reverse;
-    flex:5;
+    height: 80%;
+    width: 100%;
 
 }
 
@@ -267,6 +283,19 @@ p {
     padding: 5px;
     border: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
